@@ -10,16 +10,6 @@ async function main(){
     const product = new Contenedor('productos');
     const miProducto = await product.getAll();
 
-    // function getRandom(){
-    //    let random = Math.ceil(Math.random() * 5);
-    //     return random;
-    // }
-
-    // let productoRandom = await product.getById(getRandom());
-    
-    console.log('Este es mi producto', [miProducto]);
-    
-
     app.get('/', (req, res) => {
         res.send('Bienvenidos a servidor de productos');
     });
