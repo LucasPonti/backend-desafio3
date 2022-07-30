@@ -1,0 +1,27 @@
+[
+    {
+        "titulo":"Tablet",
+        "precio":"$35000",
+        "id":1
+    },
+    {
+        "titulo":"Heladera",
+        "precio":"$56000",
+        "id":2
+    },
+    {
+        "titulo":"Lavarropas",
+        "precio":"$49000",
+        "id":3
+    },
+    {
+        "titulo":"Microondas",
+        "precio":"$18000",
+        "id":4
+    },
+    {
+        "titulo":"Cocina",
+        "precio":"$38000",
+        "id":5
+    }
+]
