@@ -5,23 +5,20 @@ const app = express();
 
 
 
-async function main(){
+
     
     const product = new Contenedor('productos');
-    const miProducto = await product.getAll();
 
     app.get('/', (req, res) => {
         res.send('Bienvenidos a servidor de productos');
     });
 
-    app.get('/productos', (req, res) => {
-        res.send(JSON.stringify([miProducto]));
+    app.get('/productos', async (req, res) => {
+        res.send(await product.getAll());
     });
 
-    app.get('/productosRandom', (req, res) => {  
-        let id = Math.ceil(Math.random() * 5);
-        const productsById = miProducto.find(p => p.id === id);
-        res.send(JSON.stringify([productsById]));
+    app.get('/productosRandom', async (req, res) => {  
+        res.send(await product.getById(Math.ceil(Math.random() * 5)));
     });
 
     const server = app.listen(8080, () => {
@@ -29,6 +26,4 @@ async function main(){
     });
     
     server.on('error', error => console.log(`Error en el servidor ${error}`));
-}
 
-main()
