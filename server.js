@@ -2,11 +2,6 @@ const express = require('express');
 const Contenedor = require('./contenedor');
 const app = express();
 
-
-
-
-
-    
     const product = new Contenedor('productos');
 
     app.get('/', (req, res) => {
